@@ -1,0 +1,88 @@
+ @import url('../styles/fonts.css');
+ * {
+     margin: 0%;
+     box-sizing: border-box;
+ }
+ /*------------------------------------ variables------------------------------------ */
+ 
+ :root {
+     --clr-font-gray: #504949
+ }
+ /*--------------x---------------------- variables --------------x----------------------*/
+ /* ------------------------------------global------------------------------------ */
+ 
+ .flex-row {
+     display: flex;
+     flex-flow: row wrap;
+ }
+ 
+ li {
+     list-style: none;
+ }
+ 
+ a {
+     cursor: pointer;
+     text-decoration: none;
+ }
+ /* -------------------x-----------------global----------------------x-------------- */
+ /* ------------------------------------ nav ------------------------------------ */
+ 
+ .nav {
+     min-height: 10vh;
+     background-color: white;
+     padding: 0 2rem;
+     height: 0;
+ }
+ 
+ .nav-items {
+     justify-content: space-between;
+ }
+ 
+ .blogger a {
+     padding: 1rem 0;
+     font-size: 1.6em;
+     font-family: LexendDeca;
+     color: var(--clr-font-gray);
+     display: block;
+ }
+ 
+ .menu {}
+ 
+ .menu-items li {
+     padding: 1.6rem 1rem
+ }
+ 
+ .menu-items li a {
+     font-family: Abel;
+     font-size: 1.1rem;
+     color: var(--clr-font-gray);
+ }
+ 
+ .social {
+     padding: 1.4rem 0;
+ }
+ 
+ .social a {
+     color: var(--clr-font-gray);
+ }
+ 
+ .social a i {
+     padding: 0 .2rem;
+ }
+ 
+ .toggle-menu {
+     flex-basis: 80%;
+     justify-content: flex-end;
+     align-self: center;
+ }
+ 
+ .toggle-menu a i {
+     padding: 1.7rem 0.35rem;
+     font-size: 1.4rem;
+     color: var(--clr-font-gray);
+ }
+ /* -------------------x----------------- nav -----------------x------------------- */
+ 
+ body {
+     background-color: red;
+ }
