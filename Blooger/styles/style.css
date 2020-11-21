@@ -1,88 +1,146 @@
- @import url('../styles/fonts.css');
- * {
-     margin: 0%;
-     box-sizing: border-box;
- }
- /*------------------------------------ variables------------------------------------ */
- 
- :root {
-     --clr-font-gray: #504949
- }
- /*--------------x---------------------- variables --------------x----------------------*/
- /* ------------------------------------global------------------------------------ */
- 
- .flex-row {
-     display: flex;
-     flex-flow: row wrap;
- }
- 
- li {
-     list-style: none;
- }
- 
- a {
-     cursor: pointer;
-     text-decoration: none;
- }
- /* -------------------x-----------------global----------------------x-------------- */
- /* ------------------------------------ nav ------------------------------------ */
- 
- .nav {
-     min-height: 10vh;
-     background-color: white;
-     padding: 0 2rem;
-     height: 0;
- }
- 
- .nav-items {
-     justify-content: space-between;
- }
- 
- .blogger a {
-     padding: 1rem 0;
-     font-size: 1.6em;
-     font-family: LexendDeca;
-     color: var(--clr-font-gray);
-     display: block;
- }
- 
- .menu {}
- 
- .menu-items li {
-     padding: 1.6rem 1rem
- }
- 
- .menu-items li a {
-     font-family: Abel;
-     font-size: 1.1rem;
-     color: var(--clr-font-gray);
- }
- 
- .social {
-     padding: 1.4rem 0;
- }
- 
- .social a {
-     color: var(--clr-font-gray);
- }
- 
- .social a i {
-     padding: 0 .2rem;
- }
- 
- .toggle-menu {
-     flex-basis: 80%;
-     justify-content: flex-end;
-     align-self: center;
- }
- 
- .toggle-menu a i {
-     padding: 1.7rem 0.35rem;
-     font-size: 1.4rem;
-     color: var(--clr-font-gray);
- }
- /* -------------------x----------------- nav -----------------x------------------- */
- 
- body {
-     background-color: red;
- }
+@import url('../styles/fonts.css');
+
+* {
+    margin: 0%;
+    box-sizing: border-box;
+}
+
+/*------------------------------------ variables------------------------------------ */
+
+:root {
+    --text-gray: #3f4954;
+    --text-light: #686666da;
+    --bg-color: #0f0f0f;
+    --white: #ffffff;
+    --midnight: #104f55;
+    --sky: linear-gradient(120deg, #a1c4fd 0%, #c2e9fb 100%);
+    --Abel: 'Abel', cursive;
+    --Anton: 'Anton', cursive;
+    --Josefin: 'Josefin', cursive;
+    --Lexend: 'Lexend', cursive;
+    --Livvic: 'Livvic', cursive;
+}
+
+/*--------------x---------------------- variables --------------x----------------------*/
+/* ------------------------------------global------------------------------------ */
+
+.flex-row {
+    display: flex;
+    flex-flow: row wrap;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    cursor: pointer;
+    text-decoration: none;
+}
+
+/* -------------------x-----------------global----------------------x-------------- */
+/* ------------------------------------ nav ------------------------------------ */
+
+.nav {
+    min-height: 10vh;
+    background-color: white;
+    padding: 0 2rem;
+    height: 0;
+    transition: all 1000ms;
+    overflow: hidden;
+}
+
+.nav-items {
+    justify-content: space-between;
+}
+
+.blogger a {
+    padding: 1rem 0;
+    font-size: 1.6em;
+    font-family: LexendDeca;
+    color: var(--text-gray);
+    display: block;
+}
+
+.menu {
+}
+
+.menu-items li {
+    padding: 1.6rem 1rem;
+    cursor: pointer;
+}
+
+.menu-items li a {
+    font-family: Abel;
+    font-size: 1.1rem;
+    color: var(--text-gray);
+}
+
+.menu-items li:hover {
+    background-color: var(--midnight);
+    color: white;
+}
+
+.menu-items li:hover a {
+    color: white;
+}
+
+.social {
+    padding: 1.4rem 0;
+}
+
+.social a {
+    color: var(--text-gray);
+}
+
+.social a i {
+    padding: 0 .2rem;
+}
+
+.toggle-menu {
+    position: absolute;
+    width: 90%;
+    top: 0;
+    display: none;
+}
+
+.toggle-btn {
+    justify-content: flex-end;
+}
+
+.collapse {
+    height: 30rem;
+}
+
+.toggle-menu a i {
+    padding: 1.7rem 0.35rem;
+    font-size: 1.4rem;
+    color: var(--text-gray);
+}
+
+/* -------------------x----------------- nav -----------------x------------------- */
+
+/* ------------------------------------ main ------------------------------------ */
+.main .background-image {
+    height: 110vh;
+    background: url(../assets/images/Background-image.png) no-repeat;
+    background-size: cover;
+}
+
+
+/* -------------------x----------------- main -----------------x------------------- */
+
+
+@media screen and (max-width: 750px) {
+    .nav-items {
+        flex-direction: column;
+    }
+
+    .toggle-menu {
+        display: initial;
+    }
+
+    .menu-items {
+        flex-direction: column;
+    }
+}
