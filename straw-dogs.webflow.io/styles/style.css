@@ -1,0 +1,280 @@
+@font-face {
+    font-family: 'a1';
+
+
+    src:
+        url('../fonts/f2.woff2') format('woff2'),
+        /* Super Modern Browsers */
+}
+
+@font-face {
+    font-family: 'a2';
+
+    src:
+        url('../fonts/f2.woff2') format('woff2'),
+        /* Super Modern Browsers */
+}
+
+@font-face {
+    font-family: 'a3';
+
+    src:
+        url('../fonts/f3.woff2') format('woff2'),
+}
+
+@font-face {
+    font-family: 'Anton-Regular';
+
+    src:
+        url('../fonts/Anton/Anton-Regular.ttf')
+}
+
+
+
+:root {
+    --tomato-clr: #ea543e;
+    --black-clr : #222222;
+    --bg-clr    : #d0cec0;
+    --dark-tomato-clr:#b41f08;
+}
+
+* {
+    padding   : 0;
+    margin    : 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--bg-clr);
+    font-family     : 'a1', 'a2', 'a3', Lora, sans-serif;
+}
+
+.container {
+    display              : grid;
+    grid-template-columns: 4vw repeat(5, 1fr) 4vw;
+    grid-template-rows   : 5vh repeat(3, minmax(30vh, auto)) 5vh;
+}
+
+.big-s {
+    grid-column      : 2/span 1;
+    grid-row         : 2/span 2;
+    background-image : url(../assets/images/S.svg);
+    z-index          : 1;
+    background-repeat: no-repeat;
+    margin           : -6px 0 0 -20px;
+    transform        : scale(1) skew(0deg, 1deg);
+}
+
+.man-img {
+    grid-column        : 2/4;
+    grid-row           : 2/5;
+    overflow           : hidden;
+    margin-top         : 16vh;
+    background-image   : url(../assets/images/man.jpg);
+    background-position: top center;
+    background-size    : cover;
+    border-top         : 9px solid var(--tomato-clr);
+    border-right       : 9px solid var(--black-clr);
+    border-radius      : 0px 209px 0 0;
+}
+
+.black-circle {
+    grid-row        : 3/ 1 span;
+    grid-column     : 2/1 span;
+    background-color: var(--black-clr);
+    width           : 100px;
+    height          : 100px;
+    border-radius   : 50%;
+    align-self      : end;
+    justify-self    : end;
+}
+
+.lines {
+    grid-column    : 2/1 span;
+    grid-row       : 4/1 span;
+    display        : flex;
+    flex-flow      : column nowrap;
+    justify-content: space-between;
+    margin         : 2vh 2vh 14vh -2vh;
+    transform      : scale(1) skew(0deg, 1deg);
+
+}
+
+.lines .line {
+    background-color: var(--tomato-clr);
+    height          : .7vh;
+}
+
+.black-flags {
+    grid-column        : 2/7;
+    grid-row           : 4/6;
+    background-image   : url(../assets/images/flag-black.png);
+    background-repeat  : repeat-x;
+    background-size    : contain;
+    margin-top         : 19vh;
+    margin-bottom      : 3vh;
+    transform          : skew(1deg, 1deg);
+    background-position: right;
+    z-index            : 2;
+
+}
+
+.red-flags {
+    background-position: right;
+    grid-column        : 4/7;
+    grid-row           : 2/3;
+    background-image   : url(../assets/images/flag-red.png);
+    background-repeat  : repeat-x;
+    background-size    : contain;
+    margin-bottom      : 16vh;
+    transform          : skew(1deg, 1deg);
+
+}
+
+
+.peckinpah {
+    grid-column: 3/1 span;
+    grid-row   : 2/1 span;
+    font-weight: 400;
+    font-size  : 42px;
+    transform  : scale(1) skew(0deg, 1deg);
+}
+
+
+.circle-right {
+    grid-column : 4/5;
+    grid-row    : 2/3;
+    width       : 115px;
+    height      : 115px;
+    align-self  : start;
+    justify-self: start;
+    margin      : 3vh 0 0 3vw;
+}
+
+
+.big-D {
+    grid-column      : 4/5;
+    grid-row         : 3/4 span;
+    background-image : url('../assets/images/D.svg');
+    background-repeat: no-repeat;
+    transform        : skew(-1deg, 3deg);
+    margin-bottom    : 5vh;
+}
+
+.black-lines {
+    grid-column: 5/1 span;
+    grid-row   : 2/1 span;
+    z-index    : -1;
+}
+
+div.lines.black-lines .line {
+    background-color: var(--black-clr);
+}
+
+.dustin-section {
+    grid-column: 5/1 span;
+    grid-row   : 3;
+    color      : var(--black-clr);
+    font-size  : 2.5rem;
+    font-weight: 900;
+    line-height: 25px;
+    font-family: lora;
+    transform  : scaleY(1.6);
+}
+
+.red-letter {
+    color: var(--tomato-clr);
+}
+
+.col5 {
+    grid-column: 5/1 span;
+}
+
+.traw {
+    grid-column     : 2/4;
+    grid-row        : 2;
+    background-color: var(--tomato-clr);
+    font-size       : 5rem;
+    margin          : 172px 0 0 24px;
+    color           : var(--bg-clr);
+    font-weight     : 200;
+    font-family     : Anton-Regular, Anton, sans-serif;
+    transform       : skew(0deg, 26deg);
+    padding-left    : 149px;
+    display         : flex;
+    justify-content : center;
+    height          : 39%;
+    letter-spacing  : 5px;
+}
+
+.OGS {
+    grid-column     : 4/2 span;
+    grid-row        : 3;
+    background-color: var(--black-clr);
+    margin          : 17vh 3vh 0 18vh;
+}
+
+.sec-1971 {
+    grid-row       : 4/1 span;
+    font-size      : 5.5rem;
+    align-items    : center;
+    justify-content: center;
+    display        : flex;
+    font-weight    : 100;
+}
+
+.col6 {
+    grid-column: 6/1 span;
+}
+
+.text {
+    grid-row: 2/5;
+    font-size: 1.1vw;
+    line-height: 28px;
+    text-align: justify;
+    z-index: 1;
+    margin: 12vh 0;
+    color: var(--black-clr);
+    font-family: fangsong;
+}
+a.read-more {
+    grid-row: 4;
+    border-top: 4px solid var(--tomato-clr);
+    border-bottom: 4px solid var(--tomato-clr);
+    padding: 0px auto;
+    height: 6vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    font-weight: bold;
+    transform: skew(10deg, -8deg);
+    margin-top: 7vh;
+    z-index: 2;
+    text-decoration: none;
+    font-family: Anton-Regular, Anton, sans-serif;
+    letter-spacing: 16px;
+}
+a.read-more:hover {
+    color: var(--dark-tomato-clr);
+    border-color: var(--dark-tomato-clr);
+}
+
+.first-letter{    font-size: 3rem;
+    background-color: var(--black-clr);
+    padding: 0px 9px;
+}
+
+.zigzak{
+    grid-column: 5/2 span;
+    grid-row: 3/2 span;
+    background-image: url(../assets/images/zigzak.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-repeat-y: repeat;
+    width: 29vh;
+    z-index: -1;
+    opacity: 0.25;
+    margin-left: 56%;
+    filter: saturate(0);
+}
